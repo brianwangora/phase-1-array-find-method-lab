@@ -1,6 +1,6 @@
 // code your solution here
 const record = [
-    {year: "2018", result: "N/A"},
+    { year: "2018", result: "N/A"},
     { year: "2017", result: "N/A"},
     { year: "2016", result: "N/A"},
     { year: "2015", result: "W"},
@@ -11,6 +11,11 @@ const record = [
     { year: "2010", result: "N/A"},
       ]
 function superbowlWin(record) {
-    const trophy = record.find(win => {return win.result === "W"} )
-    return trophy
-}
+    for (const win of record) {
+        if (win.result === "W") {
+            return(win.year)
+        }
+        
+    }
+}    
+console.log(superbowlWin(record))
