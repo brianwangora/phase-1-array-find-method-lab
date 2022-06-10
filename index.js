@@ -10,12 +10,23 @@ const record = [
     { year: "2011", result: "N/A"},
     { year: "2010", result: "N/A"},
       ]
-function superbowlWin(record) {
+/*function superbowlWin(record) {
     for (const win of record) {
         if (win.result === "W") {
             return(win.year)
         }
         
     }
-}    
+} */
+
+function superbowlWin(record) {
+    const trophy = record.find(win => {
+        return win.result === "W"
+    })
+    if (trophy) {
+        return trophy.year
+    } else {
+        return undefined
+    } 
+}
 console.log(superbowlWin(record))
